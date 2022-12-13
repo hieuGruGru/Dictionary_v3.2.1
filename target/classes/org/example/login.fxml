@@ -52,9 +52,9 @@
             <FontAwesomeIconView glyphName="CLOSE" layoutX="676.0" layoutY="22.0" onMouseClicked="#close" size="25" />
             <FontAwesomeIconView glyphName="MINUS" layoutX="646.0" layoutY="25.0" onMouseClicked="#minimize" size="25" />
          </children></Pane>
-      <ImageView fx:id="loginImage" fitHeight="287.0" fitWidth="311.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="loginImage" fitHeight="287.0" fitWidth="250.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../image/login7hMode.jpg" />
+            <Image url="@../image/login/login7hMode.jpg" />
          </image>
       </ImageView>
    </children>

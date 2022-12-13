@@ -1,9 +1,5 @@
 package org.example;
 
-import javafx.scene.image.Image;
-
-import java.net.URL;
-
 public class Theme {
     private String themeName;
     private String loginImage;
@@ -12,9 +8,9 @@ public class Theme {
 
     public Theme(String themeName) {
         this.themeName = themeName;
-        this.loginImage = "/org/image/login" + themeName + ".jpg";
+        this.loginImage = "/org/image/login/login" + themeName + ".jpg";
         this.logoImage = "/org/image/logo.jpg";
-        this.optionImage = "/org/image/option" + themeName + ".jpg";
+        this.optionImage = "/org/image/option/option" + themeName + ".jpg";
     }
 
     public String getThemeName() {
@@ -35,8 +31,8 @@ public class Theme {
 
     public void setTheme(String themeName) {
         this.themeName = themeName;
-        this.loginImage = "/org/image/login" + themeName + ".jpg";
-        this.optionImage = "/org/image/option" + themeName + ".jpg";
+        this.loginImage = "/org/image/login/login" + themeName + ".jpg";
+        this.optionImage = "/org/image/option/login" + themeName + ".jpg";
     }
 
 }
