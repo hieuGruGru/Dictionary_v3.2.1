@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" styleClass="Pane_background" stylesheets="@7hMode.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.PrimaryController">
    <children>
@@ -21,39 +20,39 @@
                   <Image url="@../image/delete/delete-0-7hMode.jpg" />
                </image>
             </ImageView>
-            <TextField layoutX="62.0" layoutY="53.0" prefHeight="35.0" prefWidth="342.0" promptText="Nhập từ" styleClass="textField">
+            <TextField fx:id="searchText" layoutX="62.0" layoutY="53.0" prefHeight="35.0" prefWidth="342.0" promptText="Nhập từ" styleClass="textField">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <TextField layoutX="20.0" layoutY="115.0" prefHeight="35.0" prefWidth="300.0" styleClass="textField" />
-            <TextField fx:id="secondLang" layoutX="20.0" layoutY="174.0" prefHeight="35.0" prefWidth="300.0" styleClass="textField" />
-            <Label layoutX="342.0" layoutY="124.0" prefHeight="35.0" prefWidth="105.0" styleClass="Label" text="Tiếng Việt">
+            <TextField fx:id="firstTextField" layoutX="25.0" layoutY="115.0" prefHeight="35.0" prefWidth="300.0" styleClass="textField" />
+            <TextField fx:id="secondTextField" layoutX="25.0" layoutY="174.0" prefHeight="35.0" prefWidth="300.0" styleClass="textField" />
+            <Label fx:id="firstLanguage" layoutX="342.0" layoutY="124.0" prefHeight="35.0" prefWidth="76.0" styleClass="Label" text="Tiếng Việt">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="342.0" layoutY="183.0" prefHeight="35.0" prefWidth="105.0" styleClass="Label" text="Tiếng Anh">
+            <Label fx:id="secondLanguage" layoutX="342.0" layoutY="183.0" prefHeight="35.0" prefWidth="74.0" styleClass="Label" text="Tiếng Anh">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <FontAwesomeIconView glyphName="SEARCH" layoutX="28.0" layoutY="79.0" size="25" />
-            <JFXButton alignment="CENTER" layoutX="20.0" layoutY="490.0" onAction="#Setting" prefHeight="35.0" prefWidth="105.0" styleClass="JFXButton" text="Cài đặt ">
+            <FontAwesomeIconView glyphName="SEARCH" layoutX="20.0" layoutY="79.0" onMouseClicked="#search" size="25" />
+            <JFXButton alignment="CENTER" layoutX="20.0" layoutY="490.0" onAction="#Setting" prefHeight="35.0" prefWidth="80.0" styleClass="JFXButton" text="Cài đặt ">
                <font>
                   <Font size="14.0" />
                </font></JFXButton>
-            <JFXButton fx:id="buttonSave" alignment="CENTER" layoutX="330.0" layoutY="490.0" onAction="#saveFile" prefHeight="35.0" prefWidth="105.0" styleClass="JFXButton" text="Lưu">
+            <JFXButton fx:id="buttonSave" alignment="CENTER" layoutX="330.0" layoutY="490.0" onAction="#saveFile" prefHeight="35.0" prefWidth="80.0" styleClass="JFXButton" text="Lưu">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXButton>
-            <JFXButton alignment="CENTER" layoutX="20.0" layoutY="408.0" onAction="#addWord" prefHeight="35.0" prefWidth="80.0" styleClass="JFXButton" text="Thêm từ">
+            <JFXButton alignment="CENTER" layoutX="20.0" layoutY="444.0" onAction="#addWord" prefHeight="35.0" prefWidth="80.0" styleClass="JFXButton" text="Thêm từ">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXButton>
-            <JFXButton alignment="CENTER" layoutX="333.0" layoutY="343.0" prefHeight="35.0" prefWidth="80.0" styleClass="JFXButton" text="Sửa từ">
+            <JFXButton alignment="CENTER" layoutX="333.0" layoutY="300.0" prefHeight="35.0" prefWidth="80.0" styleClass="JFXButton" text="Sửa từ">
                <font>
                   <Font size="14.0" />
                </font>
@@ -63,7 +62,7 @@
                   <Font size="14.0" />
                </font>
             </JFXButton>
-            <JFXButton alignment="CENTER" layoutX="20.0" layoutY="293.0" onAction="#speak" prefHeight="35.0" prefWidth="80.0" styleClass="JFXButton" text="Phát âm">
+            <JFXButton alignment="CENTER" layoutX="20.0" layoutY="258.0" onAction="#speak" prefHeight="35.0" prefWidth="80.0" styleClass="JFXButton" text="Phát âm">
                <font>
                   <Font size="14.0" />
                </font>
@@ -76,11 +75,11 @@
          <children>
             <FontAwesomeIconView glyphName="CLOSE" layoutX="676.0" layoutY="22.0" onMouseClicked="#close" size="25" />
             <FontAwesomeIconView glyphName="MINUS" layoutX="646.0" layoutY="25.0" onMouseClicked="#minimize" size="25" />
-            <Text layoutX="43.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DICTIONARY_v3.2.1" wrappingWidth="170.13674926757812">
+            <TextField editable="false" layoutX="33.0" layoutY="-4.0" prefHeight="40.0" prefWidth="189.0" styleClass="MainText" text="DICTIONARY_v3.2.1">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
-            </Text>
+            </TextField>
          </children></Pane>
       <ListView fx:id="list" layoutX="15.0" layoutY="40.0" prefHeight="500.0" prefWidth="230.0" />
    </children>

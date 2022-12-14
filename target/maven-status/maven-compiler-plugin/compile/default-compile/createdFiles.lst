@@ -1,9 +1,16 @@
 org\example\PrimaryController.class
+org\example\Trie$TrieNode.class
+org\example\DictionaryManagement.class
 org\example\App.class
+org\example\Trie.class
 org\example\GetImage.class
 org\example\Theme.class
+org\example\Normalize.class
+org\example\Audio.class
+org\example\ConnectToSQLServer.class
 module-info.class
 org\example\OptionController.class
 org\example\LoginController.class
 org\example\Setting.class
+org\example\Dictionary.class
 org\example\Launcher.class

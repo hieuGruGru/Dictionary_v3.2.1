@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" styleClass="Pane_background" stylesheets="@7hMode.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.OptionController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" styleClass="Pane_background" stylesheets="@7hMode.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.OptionController">
    <children>
       <Pane fx:id="option_ContentArea" layoutX="250.0" prefHeight="550.0" prefWidth="450.0" styleClass="Pane_content">
          <children>
@@ -65,7 +65,7 @@
                   <Image url="@../image/option/option-1-7hMode.jpg" />
                </image>
             </ImageView>
-            <JFXButton fx:id="qqqButton" layoutX="236.0" layoutY="287.0" onAction="#qqqtrox" onMouseClicked="#qqqtrox" onMouseReleased="#statusHandle" prefHeight="25.0" prefWidth="35.0" text=" " />
+            <JFXButton fx:id="qqqButton" layoutX="236.0" layoutY="287.0" onAction="#qqqtrox" onMouseReleased="#statusHandle" prefHeight="25.0" prefWidth="35.0" text=" " />
             <FontAwesomeIconView fx:id="infoButton" layoutX="110.0" layoutY="88.0" onMouseClicked="#showInfo" onMouseReleased="#statusHandle" size="25" visible="false" />
          </children></Pane>
       <VBox layoutY="6.0" prefHeight="225.0" prefWidth="250.0">

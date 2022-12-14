@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -32,13 +33,30 @@ public class PrimaryController implements Initializable {
     @FXML
     private ListView<String> list = new ListView<>();
     @FXML
-    private TextField secondLang;
+    private TextField searchText;
+    @FXML
+    private TextField firstTextField;
+    @FXML
+    private TextField secondTextField;
+    @FXML
+    private Label firstLanguage;
+    @FXML
+    private Label secondLanguage;
     @FXML
     ImageView statusImage = new ImageView();
     @FXML
     Button yes;
     @FXML
     Button no;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        addFlag = 0;
+        allowDel = -1;
+        list.getItems().addAll(word);
+        statusImage.setImage(GetImage.getImageUrl(defaultImage));
+    }
+
     @FXML
     private void dragged(MouseEvent event) {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -67,14 +85,6 @@ public class PrimaryController implements Initializable {
     @FXML
     private void Setting() throws IOException {
         App.setScene("option");
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        addFlag = 0;
-        allowDel = -1;
-        list.getItems().addAll(word);
-        statusImage.setImage(GetImage.getImageUrl(defaultImage));
     }
 
     @FXML
@@ -114,6 +124,11 @@ public class PrimaryController implements Initializable {
     private void speak() {
         String imagePath = GetImage.getImagePath("speak", 1, App.appTheme.getThemeName());
         statusImage.setImage(GetImage.getImageUrl(imagePath));
+    }
+
+    @FXML
+    private void search() {
+
     }
 
     @FXML
