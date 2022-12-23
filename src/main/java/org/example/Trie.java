@@ -4,15 +4,17 @@ public class Trie {
 
     public static class TrieNode{
         TrieNode[] children;
-        boolean endOfWord;
-        String target;
-        String target_Normalize;
-        String meaning;
+        private boolean endOfWord;
+        private String target;
+        private String target_Normalize;
+        private String meaning1;
+        private String meaning2;
         public TrieNode() {
             this.children = new TrieNode[26];
             this.endOfWord = false;
             this.target = "";
-            this.meaning = "";
+            this.meaning1 = "";
+            this.meaning2 = "";
             this.target_Normalize = "";
             for(int i= 0; i < 26; i++) {
                 this.children[i] = null;
@@ -21,8 +23,11 @@ public class Trie {
         public String getTarget() {
             return target;
         }
-        public String getMeaning() {
-            return meaning;
+        public String getMeaning1() {
+            return meaning1;
+        }
+        public String getMeaning2() {
+            return meaning2;
         }
         public String getTarget_Normalize() {
             return target_Normalize;
@@ -30,8 +35,11 @@ public class Trie {
         public boolean getEndOfWord() {
             return endOfWord;
         }
-        public void setMeaning(String meaning) {
-            this.meaning = meaning;
+        public void setMeaning1(String meaning1) {
+            this.meaning1 = meaning1;
+        }
+        public void setMeaning2(String meaning2) {
+            this.meaning2 = meaning2;
         }
         public void setTarget(String target) {
             this.target = target;

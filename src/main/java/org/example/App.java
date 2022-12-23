@@ -16,11 +16,10 @@ public class App extends Application {
 
     private static Scene scene;
     private static Parent parent;
-
+    protected static int languageMode = 1;
+    protected static int sourceMode = 1;
     protected static Theme appTheme = new Theme("7hMode");
     private Image logoImage = GetImage.getImageUrl(App.appTheme.getLogoImage());
-
-
 
     @Override
     public void start(Stage stage) throws IOException {

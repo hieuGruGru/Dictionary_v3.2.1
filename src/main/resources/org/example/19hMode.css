@@ -25,6 +25,8 @@
     -fx-fill: BLACK;
 }
 .textField {
+    -fx-font-weight: bold;
+    -fx-font-size: 14.0;
     -fx-text-fill: WHITE;
     -fx-prompt-text-fill: BLACK;
     -fx-background-color: transparent;

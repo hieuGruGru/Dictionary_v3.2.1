@@ -9,7 +9,6 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
@@ -23,8 +22,7 @@ public class OptionController implements Initializable {
     private int q;
     private String optionImage;
     private String qqqImage;
-    @FXML
-    Text check;
+
     @FXML
     Pane contactPane;
     @FXML
@@ -84,6 +82,7 @@ public class OptionController implements Initializable {
     }
     @FXML
     private void switchTo7Mode() {
+        System.out.println("wtf cái đéo gì thế");
         App.loadCSS("7hMode");
         App.appTheme.setTheme("7hMode");
         statusMode = "01";
@@ -91,6 +90,7 @@ public class OptionController implements Initializable {
     }
     @FXML
     private void switchTo12Mode() {
+        System.out.println("đcm cuộc đời");
         App.loadCSS("12hMode");
         App.appTheme.setTheme("12hMode");
         statusMode = "01";
@@ -156,5 +156,15 @@ public class OptionController implements Initializable {
             contactPane.toFront();
             contactPane.setVisible(true);
         }
+    }
+
+    @FXML
+    private void EV() {
+        App.languageMode = 1;
+    }
+
+    @FXML
+    private void VE() {
+        App.languageMode = 2;
     }
 }

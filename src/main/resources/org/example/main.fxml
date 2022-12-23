@@ -13,20 +13,20 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" styleClass="Pane_background" stylesheets="@7hMode.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.PrimaryController">
    <children>
-      <Pane layoutX="255.0" prefHeight="550.0" prefWidth="450.0" styleClass="Pane_content">
+      <Pane layoutX="255.0" onMouseClicked="#clearStatus" prefHeight="550.0" prefWidth="450.0" styleClass="Pane_content">
          <children>
-            <ImageView fx:id="statusImage" fitHeight="220.0" fitWidth="220.0" layoutX="102.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="statusImage" fitHeight="220.0" fitWidth="220.0" layoutX="103.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../image/delete/delete-0-7hMode.jpg" />
                </image>
             </ImageView>
-            <TextField fx:id="searchText" layoutX="62.0" layoutY="53.0" prefHeight="35.0" prefWidth="342.0" promptText="Nhập từ" styleClass="textField">
+            <TextField fx:id="searchText" layoutX="62.0" layoutY="53.0" onKeyReleased="#search" prefHeight="35.0" prefWidth="342.0" promptText="Nhập từ" styleClass="textField">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
             <TextField fx:id="firstTextField" layoutX="25.0" layoutY="115.0" prefHeight="35.0" prefWidth="300.0" styleClass="textField" />
-            <TextField fx:id="secondTextField" layoutX="25.0" layoutY="174.0" prefHeight="35.0" prefWidth="300.0" styleClass="textField" />
+            <TextField fx:id="secondTextField1" layoutX="25.0" layoutY="174.0" prefHeight="35.0" prefWidth="145.0" styleClass="textField" />
             <Label fx:id="firstLanguage" layoutX="342.0" layoutY="124.0" prefHeight="35.0" prefWidth="76.0" styleClass="Label" text="Tiếng Việt">
                <font>
                   <Font size="14.0" />
@@ -52,7 +52,7 @@
                   <Font size="14.0" />
                </font>
             </JFXButton>
-            <JFXButton alignment="CENTER" layoutX="333.0" layoutY="300.0" prefHeight="35.0" prefWidth="80.0" styleClass="JFXButton" text="Sửa từ">
+            <JFXButton alignment="CENTER" layoutX="333.0" layoutY="300.0" onAction="#updateWord" prefHeight="35.0" prefWidth="80.0" styleClass="JFXButton" text="Sửa từ">
                <font>
                   <Font size="14.0" />
                </font>
@@ -70,6 +70,8 @@
             <JFXButton fx:id="yes" focusTraversable="false" layoutX="135.0" layoutY="281.0" onAction="#allowDel" prefHeight="25.0" prefWidth="23.0" text=" " />
             <JFXButton fx:id="no" focusTraversable="false" layoutX="200.0" layoutY="281.0" onAction="#deniedDel" prefHeight="25.0" prefWidth="23.0" text=" " />
             <FontAwesomeIconView glyphName="CLOSE" layoutX="388.0" layoutY="83.0" onMouseClicked="#clearSearchText" size="15" />
+            <TextField fx:id="secondTextField2" layoutX="180.0" layoutY="174.0" prefHeight="35.0" prefWidth="145.0" styleClass="textField" />
+            <TextField fx:id="statusText" editable="false" focusTraversable="false" layoutX="113.0" layoutY="258.0" prefHeight="35.0" prefWidth="200.0" styleClass="textField" visible="false" />
          </children></Pane>
       <Pane fx:id="main_TitlePane" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="40.0" prefWidth="700.0">
          <children>
@@ -81,6 +83,6 @@
                </font>
             </TextField>
          </children></Pane>
-      <ListView fx:id="list" layoutX="15.0" layoutY="40.0" prefHeight="500.0" prefWidth="230.0" />
+      <ListView fx:id="listView" layoutX="15.0" layoutY="40.0" onMouseClicked="#getMeaning" prefHeight="500.0" prefWidth="230.0" />
    </children>
 </AnchorPane>
