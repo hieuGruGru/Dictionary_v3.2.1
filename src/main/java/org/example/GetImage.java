@@ -1,7 +1,6 @@
 package org.example;
 
 import javafx.scene.image.Image;
-
 import java.net.URL;
 
 public class GetImage {

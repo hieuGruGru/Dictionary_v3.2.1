@@ -3,9 +3,7 @@ package org.example;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
-import java.util.Optional;
 import java.util.ResourceBundle;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -16,7 +14,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class PrimaryController implements Initializable {
-
     @FXML
     ListView<String> listView = new ListView<>();
     @FXML
@@ -42,17 +39,9 @@ public class PrimaryController implements Initializable {
 
     private double x, y;
     private int allowDel;
-    private String defaultImage = GetImage.getImagePath
-            ("main", 1, App.appTheme.getThemeName());
+    private String defaultImage = GetImage.getImagePath("main", 1, App.appTheme.getThemeName());
     String inputPath = "";
     String outputPath = "";
-    private String[] word = {"aaaaaa", "bbbbbb", "cc", "deeee", "aaaaaa", "bbbbbb", "cc", "deeee",
-            "aaaaaa", "bbbbbb", "cc", "deeee", "aaaaaa", "bbbbbb", "cc", "deeee",
-            "aaaaaa", "bbbbbb", "cc", "deeee", "aaaaaa", "bbbbbb", "cc", "deeee",
-            "aaaaaa", "bbbbbb", "cc", "deeee", "aaaaaa", "bbbbbb", "cc", "deeee",
-            "aaaaaa", "bbbbbb", "cc", "deeee"};
-
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -232,9 +221,10 @@ public class PrimaryController implements Initializable {
     }
 
     @FXML
-    private void saveFile(ActionEvent event) {
+    private void saveFile(ActionEvent event) throws IOException {
         String imagePath = GetImage.getImagePath("save", 1, App.appTheme.getThemeName());
         statusImage.setImage(GetImage.getImageUrl(imagePath));
+        DictionaryMgmt.export(outputPath);
     }
 
     private void reloadList() {

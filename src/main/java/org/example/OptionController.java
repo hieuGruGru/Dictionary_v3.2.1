@@ -15,14 +15,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class OptionController implements Initializable {
-
-
-    private double x,y;
-    protected String statusMode;
-    private int q;
-    private String optionImage;
-    private String qqqImage;
-
     @FXML
     Pane contactPane;
     @FXML
@@ -33,6 +25,12 @@ public class OptionController implements Initializable {
     FontAwesomeIconView infoButton;
     @FXML
     Button qqqButton;
+
+    private double x,y;
+    protected String statusMode;
+    private int q;
+    private String optionImage;
+    private String qqqImage;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -57,30 +55,37 @@ public class OptionController implements Initializable {
         stage.setX(event.getScreenX() - x);
         stage.setY(event.getScreenY() - y);
     }
+
     @FXML
     private void pressed(MouseEvent event) {
         x = event.getSceneX();
         y = event.getSceneY();
     }
+
     @FXML
     private void close(MouseEvent event) {
         Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         stage.close();
     }
+
     @FXML
     private void minimize(MouseEvent event) {
         Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         stage.setIconified(true);
     }
+
     @FXML
     private void logOut() throws IOException {
         App.setScene("login");
     }
+
     @FXML
     private void loadMainScene() throws IOException {
         App.setScene("main");
     }
+
     @FXML
+
     private void switchTo7Mode() {
         System.out.println("wtf cái đéo gì thế");
         App.loadCSS("7hMode");
@@ -88,6 +93,7 @@ public class OptionController implements Initializable {
         statusMode = "01";
 
     }
+
     @FXML
     private void switchTo12Mode() {
         System.out.println("đcm cuộc đời");
@@ -96,12 +102,14 @@ public class OptionController implements Initializable {
         statusMode = "01";
 
     }
+
     @FXML
     private void switchTo19Mode() {
         App.loadCSS("19hMode");
         App.appTheme.setTheme("19hMode");
         statusMode = "01";
     }
+
     @FXML
     private void switchTo24Mode() {
         App.appTheme.setTheme("24hMode");

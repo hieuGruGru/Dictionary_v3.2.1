@@ -7,10 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
 import java.io.IOException;
-import java.net.URL;
-
 
 public class App extends Application {
 
@@ -48,7 +45,6 @@ public class App extends Application {
         parent.getStylesheets().add(App.class.getResource(css + ".css").toExternalForm());
         return parent;
     }
-
 
     public static void main(String[] args) {
         launch();
