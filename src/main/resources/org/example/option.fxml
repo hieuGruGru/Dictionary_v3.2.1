@@ -66,7 +66,7 @@
                </image>
             </ImageView>
             <JFXButton fx:id="qqqButton" layoutX="236.0" layoutY="287.0" onAction="#qqqtrox" onMouseReleased="#statusHandle" prefHeight="25.0" prefWidth="35.0" text=" " />
-            <FontAwesomeIconView fx:id="infoButton" layoutX="110.0" layoutY="88.0" onMouseClicked="#showInfo" onMouseReleased="#statusHandle" size="25" visible="false" />
+            <FontAwesomeIconView fx:id="infoButton" glyphName="DIAMOND" layoutX="110.0" layoutY="88.0" onMouseClicked="#showInfo" onMouseReleased="#statusHandle" size="25" visible="false" />
          </children></Pane>
       <VBox layoutY="6.0" prefHeight="225.0" prefWidth="250.0">
          <children>
